@@ -1,0 +1,733 @@
+/**
+ * @Author: Your name
+ * @Date:   2021-11-24 16:26:21
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2021-12-01 10:52:57
+ */
+@import './mixin.scss';
+// 公共的tooltip
+.el-tooltip__popper {
+  max-width: 553px;
+  height: 40px;
+  background: #D3D5E1 !important;
+  padding: 11px 21px 10px 18px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Microsoft YaHei';
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
+  color: #333333!important;
+  border-radius: 4px;
+  .popper__arrow {
+      border-top-color: #D3D5E1;
+      &::after {
+          border-top-color: #D3D5E1;
+      }
+  }
+}
+
+/***************************el-dialog对话框********************************/
+
+.v-modal {
+    opacity: 0.25;
+}
+.el-switch .el-switch__core{
+      width: 72px!important;
+      height: 28px!important;
+      border-radius: 16px;
+      border-color: #FF5659;
+      background-color: #FF5659;
+      &::after{
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px!important;
+        height: 22px!important;
+        
+      }
+}
+  .is-disabled {
+      .el-switch__core{
+          border-color: #163545!important;
+          background-color: #163545!important;
+        }
+    }
+.el-switch.is-checked .el-switch__core{
+  border-color: #13FFA7 ;
+  background-color: #13FFA7;
+}
+.el-switch.is-checked .el-switch__core::after {
+  left: 90%;
+}
+
+
+.logoutDialog {
+    width: 30%!important;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.16);
+    padding:20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    .el-dialog__header {
+        height: 20px;
+        line-height: 20px;
+        padding:0;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        span {
+            color: #333333;
+            font-size: 20px;
+            font-family: ' Microsoft YaHei';
+            font-weight: bold;
+        }
+        .el-dialog__headerbtn .el-dialog__close {
+           display: none;
+        }
+    }
+    .el-dialog__body {
+        font-size: 18px;
+        color: #333;
+        padding: 0;
+        margin-bottom: 30px;
+        font-family: 'Microsoft YaHei';
+    }
+    .el-dialog__footer{
+      padding:0;
+      .dialog-footer{
+        button{
+          width: 60px;
+          height: 32px;
+          padding: 0;
+          font-size: 14px;
+          font-family: 'Microsoft YaHei';
+          font-weight: 400;
+          color: #999999;
+        }
+        button:nth-child(1){
+          &:hover{
+            border:1px solid #DCDFE6;
+            color:#999999;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+}
+// 公共的弹窗
+.changPass {
+    width: 36.46%!important;
+    background: #FFFFFF;
+    padding:20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    .el-dialog__header {
+        // width: 735px;
+        padding-top: 12px!important;
+        height: 48px;
+        border-radius: 10px 10px 0px 0px;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        position: relative;
+        span {
+            color: #333333;
+            font-size: 20px;
+            font-family: ' Microsoft YaHei';
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .el-dialog__headerbtn .el-dialog__close {
+           display: none;
+        }
+    }
+    .el-dialog__body {
+        padding:0px!important;
+    }
+    .dialog-container {
+        @include flexCenter(center);
+        flex-direction: column;
+        .dialog-container-box {
+            @include flexClounm(column);
+            .el-form {
+                & .el-form-item {
+                    @include flex(center, space-between);
+                    padding-right: 0;
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                    height: 50px;
+                    .el-form-item__label {
+                        height: 40px;
+                        font-size: 16px;
+                        font-family: 'Microsoft YaHei';
+                        font-weight: 400;
+                        color: #333333;
+                    }
+                    .el-form-item__content{
+                      height: 40px;
+                      .el-input{
+                        @extend .el-form-item__content;
+                        .el-input__inner{
+                          @extend .el-form-item__content;
+                        }
+                      }
+                    }
+                    .el-form-item__error{
+                      left: 72%;
+                      top: 50%;
+                      transform: translateY(-50%);
+                      padding: 0;
+                    }
+                }
+            }
+        }
+        .option-btn {
+          width: 100%;
+          box-sizing: border-box;
+          @include flex(center, end);
+          & button {
+              width: 80px;
+              height: 32px;
+              background: #FFFFFF;
+              border: 1px solid #A9A9A9;
+              border-radius: 5px;
+              font-size: 14px;
+              font-family: 'Microsoft YaHei';
+              font-weight: 400;
+              color: #727272;
+              margin: 0;
+              padding:0;
+          }
+          .isTrue {
+              background: #337EFF;
+              color: #fff;
+              border:none;
+              margin-left: 20px;
+          }
+      }
+    }
+}
+
+// 警告
+.ErrorDialog{
+  width: 500px!important;
+  height: 158px!important;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  margin:0!important;
+  padding:20px;
+  box-sizing: border-box;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  .el-dialog__header{
+    padding:0!important;
+    width: 100%;
+    .el-dialog__headerbtn{
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      .el-icon-close{
+        color:#B9BDC6;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+  }
+  .el-dialog__body{
+    padding:0!important;
+    @include flex(center,'');
+  }
+  .dialog-container{
+    .dialog-container-box{
+     .dialog-sign{
+       height: 36px;
+       line-height: 36px;
+       margin-bottom: 5px;
+       @include flex(center,'');
+       i{
+         font-size: 36px;
+         color:#FFB549;
+       }
+       span{
+        font-size: 20px;
+        height: 36px;
+        display: inline-block;
+        font-family: 'Microsoft YaHei';
+        font-weight: bold;
+        color: #333333;
+        margin-left: 10px;
+       }
+     }
+     .sign-info{
+       padding-left: 46px;
+       box-sizing: border-box;
+       width: 100%;
+       font-size: 14px;
+       font-family: 'Microsoft YaHei';
+       font-weight: 400;
+       line-height: 19px;
+       margin-bottom: 20px;
+
+     }
+    }
+  }
+  .el-dialog__footer{
+    padding:0!important;
+      .dialog-footer{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        .el-button {
+          width: 96px;
+          height: 32px;
+          background: #337EFF;
+          border-radius: 4px;
+          font-size: 14px;
+          font-family: 'Microsoft YaHei';
+          font-weight: 400;
+          color: #fff;
+          border: 1px solid #337EFF;
+          padding:0;
+          margin-left: 46px;
+        }
+      }
+  }
+}
+
+// 顶部popover
+.top-popover{
+  min-width: 110px;
+  // height: 62px;
+  background: #3B6880!important;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  border-color: #3B6880;
+  border-radius: 2px;
+  padding:0;
+  top:39px!important;
+  margin-top: 10px!important;
+  .top_popover{
+    height: 100%;
+    width: 100%;
+    padding:0!important;
+    .top_popover_item{
+      height:40px;
+      width: 100%;
+      padding:6px 0;
+      background: #3B6880;
+      box-sizing: border-box;
+      @include flexCenter(center);
+      font-size: 16px;
+      font-family: 'Microsoft YaHei';
+      font-weight: 400;
+      color: #fff;
+      &:hover{
+        background: #1e2c35;
+      }
+    }
+  }
+  
+}
+
+// 表格占位符
+.el-table__empty-block {
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/************************************ele页数组件***************************************/
+
+.el-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    &.is-background .el-pager li:not(.disabled).active {
+        background-color: #02CCFE !important;
+        color: #fff;
+        border: none;
+        font-size: 12px;
+        width: 22px!important;
+        height: 24px;
+        border-radius: 50%;
+    }
+    &.is-background .el-pager li:not(.active):hover {
+      color: #02CCFE!important;
+  }
+    &.is-background .el-pager {
+      height: 24px;
+      @include flexCenter(center);
+      li {
+        width: 24px;
+        height: 24px;
+        border: none;
+        background-color: #254C61;
+        font-size: 14px;
+        font-family: 'HelveticaNeue';
+        line-height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+        color: #fff;
+    }
+    }
+    .el-pagination__editor {
+        margin: 0 10px;
+    }
+    .el-pagination__total {
+        height: 24px !important;
+        line-height: 24px !important;
+    }
+    .el-pagination__sizes {
+        height: 24px !important;
+        .el-select--mini .el-input--mini {
+            height: 24px;
+            & .el-input__inner {
+                height: 24px;
+            }
+        }
+    }
+    .el-pagination__jump {
+        height: 24px !important;
+        line-height: 24px !important;
+        color: #fff;
+        .el-pagination__editor {
+            color: #fff;
+            height: 24px !important;
+            .el-input__inner {
+                @extend .el-pagination__editor;
+                margin: 0;
+                border: 1px solid #02CCFE;
+                background-color: #254C61 !important;
+            }
+        }
+    }
+    .btn-prev,
+    .btn-next,
+    .more {
+        width: 24px;
+        height: 24px;
+        color: #fff!important;
+        background-color: #254C61 !important;
+        border: none;
+    }
+}
+
+
+/*********************************时间选择器*************************************/
+
+.el-date-table td.today span {
+    color: #fff !important;
+}
+
+.el-date-table td.start-date span,
+.el-date-table td.end-date span {
+    background-color: #02CCFE !important;
+}
+.el-picker-panel__sidebar{
+  background-color: #3B6880;
+  border-right: 1px solid #6F9FBB;
+  color: #FFF;
+}
+.el-picker-panel__shortcut{
+  color: #FFF;
+  line-height: 40px;
+  &:hover{
+    color: #02CCFE ;
+  }
+}
+.el-picker-panel__content .el-date-table th{
+color: #FFF;
+border-bottom: solid 1px #6F9FBB;
+}
+// .el-picker-panel__content .el-date-table tr.in-range {
+//   background-color: #254C61!important;
+// }
+.el-date-range-picker__content.is-left {
+    border-right: 1px solid #6F9FBB;
+}
+.el-picker-panel__icon-btn{
+  color: #ccc;
+}
+.el-date-table td.next-month, .el-date-table td.prev-month{
+  color: #9B9B9B;
+}
+.el-date-table td.in-range div ,.el-date-table td.in-range div:hover{
+  background-color: #254C61;
+}
+// 月
+.el-month-table td.in-range div, .el-month-table td.in-range div:hover{
+  background-color: #3B6880;
+}
+// .el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-date-table .current span {
+//   background-color: #02CCFE;
+// }
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-month-table .current div .cell{
+  background-color: #02CCFE;
+}
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-date-table td .cell:hover{
+  color: #02CCFE !important;
+}
+// 年
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-year-table .current {
+  .cell{
+    background-color: #02CCFE;
+    width: 60px;
+    height: 36px;
+    display: block;
+    line-height: 36px;
+    color: #ffffff;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+}
+
+// 全局下拉框
+.fullScreen-option{
+  width: 120px;
+  margin-top: 2px!important;
+  font-size: 16px;
+  border:1px solid #316785;
+  .el-select-dropdown{
+    border:1px solid #316785!important;
+  }
+  .el-select-dropdown__wrap{
+    max-height: 332px!important;
+    .el-select-dropdown__list{
+      padding:0;
+    }
+  }
+ 
+  .el-select-dropdown__item{
+    width: 100%;
+    height: 32px;
+    background-color: #316785;
+    padding:0 10px 0 10px;
+    box-sizing: border-box;
+    @include flex(center,'');
+      font-size: 16px;
+      font-family: 'Microsoft YaHei';
+      font-weight: 400;
+      color: #fff;
+  }
+  .is-disabled:hover {
+    background: #163545;
+    }
+  .hover {
+    font-weight: 700;
+    background: #4A7E9A;
+    span{
+      color: #02CCFE!important;
+    }
+  }
+  .el-scrollbar__bar {
+    .el-scrollbar__thumb{
+      background-color:#02CCFE;
+    }
+  }
+  .el-scrollbar__bar.is-vertical>div {
+    width: 4px;
+  }
+  .popper__arrow{
+    display: none;
+  }
+}
+//实测数据时间框
+.down-left{
+  left:120px!important;
+  & .popper__arrow{
+    left: -1px!important;
+    top:-7px!important;
+    border-bottom-color: #3B6880!important;
+    &::after{
+      border-bottom-color: #3B6880!important;
+    }
+  } 
+}
+.down-right{
+  left:982px!important;
+  & .popper__arrow{
+    left: -1px!important;
+    top:-7px!important;
+    border-bottom-color: #3B6880!important;
+    &::after{
+      border-bottom-color: #3B6880!important;
+    }
+  }
+}
+.el-year-time{
+  &>.popper__arrow{
+    border-bottom-color: #3B6880 !important;
+  &::after{
+    border-bottom-color: #3B6880 !important;
+  }
+}
+}
+// 全局下拉菜单
+.el-dropdown-menu{
+  width: 186px;
+  max-height: 500px;
+  overflow: hidden;
+  overflow-y: scroll;
+  li{
+    height: 32px!important;
+    text-align: center;
+    line-height: 32px!important;
+    width: 100%;
+    padding:0 21px!important;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 400;
+    color: #333333;
+    &:not(.is-disabled):hover, .el-dropdown-menu__item:focus {
+      background-color: rgba(51, 126, 255, .2)!important;
+      color: #337EFF;
+      border-radius:4px;
+    }
+  }
+}
+
+.station-list{
+  width: 156px;
+  .el-select-dropdown__item {
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    font-family: 'Microsoft YaHei';
+    font-weight: 400;
+    color: #333333;
+    padding-left: 10px;
+    
+    &:hover{
+      background: rgba(51, 126, 255, .2);
+    }
+  }
+  .hover{
+    background: rgba(51, 126, 255, .2)!important;
+  }
+}
+
+// 提示器
+
+.popover_Quality {
+  box-sizing: border-box;
+  background-color: #153A4E;
+  border: 0;
+  padding: 18px 20px 24px 20px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+  &[x-placement^=bottom] .popper__arrow {
+      border-bottom-color: #153A4E !important;
+  }
+  &[x-placement^=bottom] .popper__arrow:after {
+      border-bottom-color: #153A4E !important;
+  }
+  &[x-placement^=top] .popper__arrow {
+      border-top-color: #153A4E !important;
+  }
+  &[x-placement^=top] .popper__arrow:after {
+      border-top-color: #153A4E !important;
+  }
+  .container_box {
+      .title {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 20px;
+      }
+      .title span:nth-child(1) {
+          font-size: 16px;
+          font-family: 'Microsoft YaHei';
+          font-weight: bold;
+          color: #A3DAE8;
+      }
+      .title span:nth-child(2) {
+          i {
+              width: 10px;
+              height: 10px;
+              display: inline-block;
+              color: #fff;
+              font-size: 12px;
+          }
+      }
+      .infoBox {
+        font-size: 14px;
+        font-family: 'Microsoft YaHei';
+        font-weight: 400;
+        color: #FFFFFF;
+        & .item:not(.item:last-child){
+          margin-bottom: 10px;
+        }
+      }
+  }
+}
+
+// 全局日期控件
+.el-picker-panel {
+  color: #fff;
+  border: 1px solid #3B6880;
+  background: #3B6880;
+  border-radius: 0;
+  // left: 20px!important;
+  .el-picker-panel__body-wrapper{
+    & .el-date-picker__header {
+      border-bottom: solid 1px #6F9FBB;
+      .el-date-picker__prev-btn,.el-date-picker__next-btn{
+        color:#9B9B9B;
+      }
+      .el-date-picker__header-label{
+        color:#fff;
+        font-size: 12px;
+        font-family:' Microsoft YaHei';
+        font-weight: 400;
+      }
+      
+    }
+    .el-picker-panel__content{
+      .el-year-table,.el-month-table{
+        td {
+          font-size: 14px;
+          .cell {
+            color: #fff;
+            &:hover {
+              color:#409EFF;
+            }
+        }
+        } 
+        .end-date,.start-date {
+          .cell {
+              background-color: #02ccfe;
+          }
+        }
+      }
+    
+    }
+  }
+  .popper__arrow{
+    border-bottom-color: #254C61;
+
+    &::after{
+      border-bottom-color: #254C61;
+    }
+  }
+}
+
+// 全局右侧提示

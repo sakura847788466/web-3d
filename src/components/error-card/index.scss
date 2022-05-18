@@ -1,0 +1,134 @@
+@import '../../styles/mixin.scss';
+
+.error-site-box {
+  height: 100%;
+  width: 100%;
+
+  .title {
+    height: 50px;
+    width: calc(100% - 20px);
+    padding-right: 20px;
+    box-sizing: border-box;
+    background-image: url('../../assets/images/error-title_sign.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    span {
+      font-size: 24px;
+      font-family: YouSheBiaoTiHei;
+      color: #FFFFFF;
+      line-height: 11px;
+    }
+  }
+  .error-site-list{
+    width: calc(100% - 6px);
+    height: calc(100% - 80px);
+    padding-right: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: scroll;
+    &-item{
+      width: 100%;
+      height: 56px;
+      background-image: url('../../assets/images/site-item_bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-size: 16px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      line-height: 56px;
+      color: #FFFFFF;
+      padding-left: 19px;
+      cursor: pointer;
+      position: relative;
+    }
+    &-item:not(&-item:nth-last-child(1)){
+      margin-bottom: 16px;
+    }
+    .site-isActive{
+      background-image: url('../../assets/images/site-isActive.png');
+    }
+    .error-site-sign{
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%);
+    }
+    .error_item{
+      width: 100%;
+      height: 116px;
+      background-image: url('../../assets/images/error-item_bg.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 22px 24px 22px 24px;
+      box-sizing: border-box;
+      @include flex(center,space-between);
+      &-left{
+        height: 100%;
+        @include flex('',space-between);
+        flex-direction: column;
+        span:nth-child(1) {
+          width: 222px;
+          height: 19px;
+          font-size: 14px;
+          font-family: Microsoft YaHei;
+          font-weight: bold;
+          color: #FFFFFF;
+        }
+        span:nth-child(2) {
+          font-size: 14px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #7BF6FF;
+        }
+        span:nth-child(3) {
+          font-size: 12px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #32A8B8;
+        }
+      }
+      &-right{
+        height: 100%;
+        @include flex('',space-between);
+        flex-direction: column;
+        span:nth-child(1){
+          font-size: 24px;
+          font-family: DIN;
+          font-weight: 900;
+          line-height: 41px;
+          color: #FFEB7B;
+        }
+        span:nth-child(2){
+          font-size: 14px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          line-height: 41px;
+          color: #B3D0DC;
+        }
+      }
+    }
+    .error_item:not(.error_item:nth-last-child(1)) {
+      margin-bottom: 7px;
+    }
+    .check-more {
+      text-align: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: #3988FF;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .no_more{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

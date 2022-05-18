@@ -1,0 +1,355 @@
+/**
+ * @Author: Your name
+ * @Date:   2021-11-26 17:36:55
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2021-11-30 14:26:55
+ */
+@import "../../../styles/mixin.scss";
+.right-result {
+    width: 100%;
+    height: 100%;
+    .result-box {
+        @extend .right-result;
+        .title {
+            height: 60px;
+            background: #207895;
+            span {
+                font-size: 20px;
+                font-family: "Microsoft YaHei";
+                font-weight: bold;
+                line-height: 60px;
+                color: #ffffff;
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .result-content {
+            width: 100%;
+            height: calc(100% - 130px);
+            padding: 20px;
+            box-sizing: border-box;
+            .station-position {
+                width: 100%;
+                height: 80px;
+                background: #254c61;
+                padding: 14px 20px;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+                @include flex(center, "");
+                .station-left,
+                .station-right {
+                    height: 100%;
+                    @include flex(center, "");
+                }
+                .station-left {
+                    width: 290px;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .left-item {
+                        width: 100%;
+                        span {
+                            font-size: 16px;
+                            font-family: "Microsoft YaHei";
+                            font-weight: 400;
+                            color: #a3dae8;
+                        }
+                        span:nth-child(1) {
+                            width: 64px;
+                            display: inline-block;
+                            margin-right: 30px;
+                        }
+                        span:nth-child(2) {
+                            color: #fff;
+                        }
+                    }
+                }
+                .station-right {
+                    width: calc(100% - 290px);
+                    @include flex(center, space-between);
+                    span {
+                        font-size: 16px;
+                        font-family: "Microsoft YaHei";
+                        font-weight: 400;
+                        color: #a3dae8;
+                    }
+                    p {
+                        width: 20px;
+                        height: 20px;
+                        background: #13ffa7;
+                        display: inline-block;
+                        border-radius: 50%;
+                        &.err {
+                            background: #ff5659;
+                        }
+                    }
+                    span.green {
+                        color: #13ffa7;
+                        &.err {
+                            color: #ff5659;
+                        }
+                    }
+                }
+            }
+            .ele-list {
+                width: 100%;
+                height: calc(100% - 100px);
+                .ele-title {
+                    margin-bottom: 20px;
+                    height: 24px;
+                    width: 100%;
+
+                    span {
+                        font-size: 18px;
+                        font-family: "Microsoft YaHei";
+                        font-weight: bold;
+                        color: #a3dae8;
+                    }
+                }
+                .monitor-ele-list {
+                    width: 100%;
+                    height: calc(100% - 44px);
+                    padding-right: 15px;
+                    overflow: hidden;
+                    overflow-y: scroll;
+                    .ele-list-item {
+                        width: 100%;
+                        margin-bottom: 20px;
+                        & .item-title {
+                            width: 100%;
+                            height: 21px;
+                            margin-bottom: 20px;
+                            @include flex(center, "");
+                            .title-sign {
+                                font-size: 16px;
+                                font-family: "Microsoft YaHei";
+                                font-weight: 400;
+                                color: #cccccc;
+                                margin-left: 6px;
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 388px;
+                                    height: 1px;
+                                    background: #2e5367;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 47px;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                        & .ele-list-box {
+                            width: calc(100% + 26px);
+                            @include clearfix;
+                            .list-box-item {
+                                width: 145px;
+                                height: 60px;
+                                float: left;
+                                background: #254c61;
+                                margin-right: 13px;
+                                margin-bottom: 10px;
+                                .list-item-title {
+                                    width: 100%;
+                                    height: 20px;
+                                    background: #1184a4;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    @include flexCenter(center);
+                                    span {
+                                        font-size: 14px;
+                                        font-family: "Microsoft YaHei";
+                                        font-weight: bold;
+                                        color: #000000;
+                                        // width: 100%;
+                                        // white-space:nowrap;
+                                        // overflow:hidden;
+                                        // text-overflow:ellipsis;
+                                        text-align: center;
+                                    }
+                                    .text-design {
+                                        letter-spacing: -0.5px;
+                                    }
+                                }
+                                .list-item-isActive {
+                                    background-color: #f9ff56;
+                                }
+                                .item-number {
+                                    width: 100%;
+                                    height: calc(100% - 20px);
+                                    font-size: 14px;
+                                    font-family: "Microsoft YaHei";
+                                    font-weight: bold;
+                                    color: #02f2f2;
+                                    @include flexCenter(center);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .result-content-empty {
+            width: 100%;
+            height: calc(100% - 60px);
+            @include flexCenter(center);
+            .empty-box {
+                height: 114px;
+                // width: 88px;
+                @include flexCenter(center);
+                flex-direction: column;
+                span {
+                    width: 100%;
+                    height: 16px;
+                    font-size: 16px;
+                    font-family: "Microsoft YaHei";
+                    font-weight: 400;
+                    margin-top: 20px;
+                    line-height: 16px;
+                    color: #72a0ba;
+                }
+            }
+        }
+    }
+    // 分屏后
+    .result-box-screenStatus {
+        @extend .right-result;
+        .title {
+            span {
+                font-size: 16px;
+            }
+        }
+        .result-content {
+            height: calc(100% - 130px);
+            padding: 10px;
+            .station-position {
+                height: 90px;
+                padding: 10px;
+                box-sizing: border-box;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 12px;
+                .station-left,
+                .station-right {
+                    height: 100%;
+                }
+                .station-left {
+                    width: 100%;
+                    .left-item {
+                        margin-bottom: 10px;
+                        span {
+                            font-size: 12px;
+                        }
+                        span:nth-child(1) {
+                            width: 48px;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+                .station-right {
+                    // width: calc(100% - 150px);
+                    display: inline-block;
+                    // margin-top: 10px;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: left;
+                    span {
+                        font-size: 12px;
+                        // position: relative;
+                        // // width: 100%;
+                        // top: -3px;
+                        // margin-bottom: 4px;
+                        display: inline-block;
+                        height: 100%;
+                        line-height: 18px;
+                    }
+                    p {
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 3px;
+                        // margin-top: 0!important;
+                        // position: relative;
+                    }
+                    span:nth-child(1) {
+                        margin-right: 12px;
+                    }
+                }
+            }
+            .ele-list {
+                height: calc(100% - 100px);
+                .ele-title {
+                    margin-bottom: 12px;
+                    line-height: 20px;
+                    height: 20px;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                .monitor-ele-list {
+                    width: 100%;
+                    height: calc(100% - 44px);
+                    padding-right: 10px;
+                    .ele-list-item {
+                        margin-bottom: 30px;
+                        & .item-title {
+                            margin-bottom: 10px;
+                            .title-sign {
+                                font-size: 14px;
+                                margin-left: 6px;
+                            }
+                        }
+                        & .ele-list-box {
+                            width: calc(100% + 26px);
+                            @include clearfix;
+                            .list-box-item {
+                                width: 130px;
+                                height: 60px;
+                                float: left;
+                                margin-right: 10px;
+                                margin-bottom: 10px;
+                                .list-item-title {
+                                    width: 100%;
+                                    height: 20px;
+                                    background: #1184a4;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    @include flexCenter(center);
+                                    span {
+                                        font-size: 12px;
+                                        font-family: "Microsoft YaHei";
+                                        font-weight: bold;
+                                        color: #000000;
+                                    }
+                                }
+                                .list-item-isActive {
+                                    background-color: #f9ff56;
+                                }
+                                .item-number {
+                                    width: 100%;
+                                    height: calc(100% - 20px);
+                                    font-size: 14px;
+                                    font-family: "Microsoft YaHei";
+                                    font-weight: bold;
+                                    color: #02f2f2;
+                                    @include flexCenter(center);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .screen-empty {
+                span {
+                    font-size: 12px!important;
+                }
+        }
+    }
+}

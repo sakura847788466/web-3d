@@ -1,0 +1,83 @@
+@import '../../styles/common.scss';
+@import '../../styles/mixin.scss';
+.common-table {
+    height: 100%;
+    .ces-table {
+        height: 100%;
+    }
+     ::v-deep.el-table {
+        &::before {
+            height: 0 !important;
+        }
+        .success-row{
+          background-color: rgba(45, 49, 58, 0);
+        }
+        .warning-row{
+          background-color: #0F6F82;
+        }
+        .el-table__header th,
+        .el-table__header tr {
+            /*表头高度*/
+            padding: 9px 0px;
+            height: 35px;
+            box-sizing: border-box;
+            background-color: #0F6F82;
+            font-size: 14px;
+            font-family: 'Microsoft YaHei';
+            font-weight: 400;
+            line-height: 21px;
+            color: #ffffff;
+            border: none;
+        }
+        .el-table__header th:nth-child(1) {
+            padding-left: 40px;
+            .cell {
+                padding: 0;
+                text-align: left;
+            }
+        }
+        .el-table__body tr >td {
+          pointer-events:none;
+        }
+        /* 设置表主体的高度 */
+        .el-table__body tr,
+        .el-table__body td {
+            height: 40px;
+            .cell {
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        .el-table__body td,
+        .el-table__body th {
+            padding: 4px 0;
+            margin: 12px 0;
+            font-size: 14px;
+            font-family: ' Microsoft YaHei';
+            font-weight: 400;
+            color: #ffffff;
+            border: none;
+        }
+        .el-table__body td {
+            padding: {
+                top:0!important;
+                bottom: 0!important;
+            };
+            & .cell {
+                color: #ffffff;
+                font-weight: 400;
+                font-size: 14px;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        .el-table__body td:nth-child(1) {
+            padding-left: 40px;
+            .cell {
+                padding: 0;
+                text-align: left;
+            }
+        }
+        
+    }
+}

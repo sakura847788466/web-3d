@@ -1,0 +1,644 @@
+/**
+ * @Author: zhuxuxi
+ * @Date:   2021-11-24 17:18:52
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2021-12-01 10:24:49
+ */
+$blue:#02CCFE;
+$gray-blue:#254C61;
+$filter-blue:#A3DAE8;
+$deep-blue:#1E2C35;
+$red:#FF5659;
+
+//分页
+::v-deep .pageshow{
+     background: $gray-blue;
+     height: 30px;
+     padding: 20px 0;
+      .el-dialog, .el-pager li{
+       background: $gray-blue;
+       color: #fff;
+       font-size: 14px;
+       font-family: Microsoft YaHei;
+       font-weight: 400;
+       padding: 0;
+       min-width: 24px;
+       margin: 0 3px;
+       line-height: 24px;
+     }
+     .el-pager li.active{
+       width: 24px;
+      height: 24px;
+      background: #02CCFE;
+      opacity: 1;
+      border-radius: 12px;
+     }
+}
+ 
+// tabs 单站点和区域切换
+.el-tabs {
+    ::v-deep.el-tabs__header {
+      height: 60px;
+      line-height: 60px;
+      font-size: 18px;
+      width: 100%;
+      margin-bottom:30px;
+      border: none;
+      @include flexCenter(center);
+      .el-tabs__nav-wrap {
+        height: 60px;
+        width: calc(100% - 20px);
+        border-bottom: 1px solid #2E5367;
+      }
+      .el-tabs__nav-scroll {
+        height: 60px;
+        width: 100%;
+
+      }
+      .el-tabs__nav {
+        height: 60px;
+        width: 100%;
+        border: none;
+      }
+      .el-tabs__item {
+        height: 60px;
+        width: 50%;
+        text-align: center;
+        border: none;
+        font-size: 18px;
+        font-family: 'Microsoft YaHei';
+        font-weight: bold;
+        line-height: 60px;
+        color: #ffffff;
+      }
+      .is-active{
+        color: $blue;
+        position: relative;
+      }
+      .is-active::after{
+        width:30px;
+        height: 4px;
+        background: $blue;
+        position: absolute;
+        left: 50%;
+        margin-left: -15px;
+        bottom:0px;
+        content:'';
+      }
+    }
+    
+}
+
+// 
+.left-search-box{
+  height: 100%;
+  ::v-deep .left-search-box-content,::v-deep.table-title{
+
+    .el-form-item__label {
+      text-align: left;
+      vertical-align: middle;
+      float: left;
+      color: $filter-blue;
+      padding: 0 30px 0 0;
+      font-size: 16px;
+      font-family: Microsoft YaHei;
+      font-weight: 400;
+    }
+   .el-checkbox__input.is-checked+.el-checkbox__label{
+        color:#fff;
+    }
+  
+   .form-type {
+     .el-form-item__label{
+      padding: 0 0px 0 0;
+      margin-right:20px;
+     }
+      .el-form-item__content{
+          text-align: left;
+        }
+      .type-radio{
+         font-size: 16px;
+      }
+      }
+    
+  .el-input__inner{
+       width: 100%;
+       height: 40px;
+         -webkit-appearance: none;
+        background-color: $gray-blue;
+        background-image: none;
+        border-radius: 0;
+        border: 0px solid #DCDFE6;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #fff;
+        display: inline-block;
+        font-size: 16px;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        outline: 0;
+        padding: 0 0.9375rem;
+  }
+  // 时间插件
+  .search-time.el-date-editor .el-range-input{
+     background: $gray-blue;
+    // width: 42%;
+    color: #fff;
+    font-size: 16px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+  }
+  input::-webkit-input-placeholder{
+    color: #fff;
+    font-size: 16px;
+  }
+  .el-range-separator{
+    color:#A3DAE8;
+    padding: 0 3px;
+  }
+  // 时间下拉框
+  .el-picker-panel [slot=sidebar], .el-picker-panel__sidebar{
+    background-color:transparent;
+    color: #fff;
+    left: 200px!important;
+  }
+  
+  //  表单分屏双屏
+  .el-form.el-form--inline{
+    font-size: 12px;
+    .el-form-item__label{
+         font-size: 14px;
+    }
+     .el-form-item{
+      margin-right: 0;
+      margin-bottom:18px;
+    }
+    .el-form-item__content{
+      width: 100%;
+      font-size: 12px;
+    }
+    .el-form-item:nth-last-child(1){
+    .el-form-item__content{
+      display: flex;
+    }
+    }
+    .search-time.el-date-editor .el-range-input{
+        font-size: 12px;
+      }
+      .el-input__inner{
+        width: 100%;
+        height: 40px;
+         font-size: 12px;
+   } 
+    input::-webkit-input-placeholder{
+      color: #fff;
+      font-size: 12px;
+    }
+ } 
+//  .el-date-table .in-range{
+//     background: #3B6880!important;
+//     }
+    .el-select-dropdown {
+      position: absolute;
+      z-index: 1001;
+      border: 0px solid #E4E7ED;
+      border-radius: 0;
+      background-color: $gray-blue;
+      -webkit-box-shadow: 0 0.125rem 0.75rem 0 rgb(0 0 0 / 10%);
+      box-shadow: 0 0.125rem 0.75rem 0 rgb(0 0 0 / 10%);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin:  0;
+  }
+  
+  .el-select{
+    width: 100%;
+  }
+  .el-radio__inner{
+     background-color: $gray-blue;
+     border: 1px solid #77ACC8;
+  }
+  .el-radio__label{
+    color: #FFFFFF;
+    font-size: 16px;
+  }
+  .el-radio__input.is-checked+.el-radio__label{
+      color: #FFFFFF;
+  }
+  .el-radio__inner::after {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: $blue;
+  }
+   }
+
+   ::v-deep .table-title-radio{
+     .station-error{
+       &.el-radio{
+        color: $red;
+        font-size: 16px;
+       }
+       .el-radio__inner::after{
+          background-color: $red;
+       }
+        .el-radio__input.is-checked+.el-radio__label{
+        color: $red;
+        font-size: 16px;
+      }
+     } 
+     .el-radio__inner{
+       margin-left:30px;
+      border: 0px solid #77ACC8;
+    }
+     .el-radio__input.is-checked+.el-radio__label{
+      color: #13FFA7;
+      font-size: 16px;
+     }
+        .el-radio__inner::after {
+          width: 100%;
+          height: 100%;
+          border-radius: 100%;
+          background-color:#13FFA7;
+      }
+  }
+
+  &-content{
+    padding: 0 20px;
+    // height: calc(100% - 70px);
+    .search-bottom{
+      width: 100%;
+      height: 50px;
+      @include flexCenter(center);
+      ::v-deep .el-form-item__content{
+        width: 100%;
+      }
+      button{
+        width: 47%;
+        // height: 50px;
+        flex: 1;
+        border: 1px solid #02CCFE;
+        font-size: 18px;
+        font-family: 'Microsoft YaHei';
+        font-weight: 400;
+        color: #02CCFE;
+        background: #1E2C35;
+        border-radius: 30px;
+      }
+      // button:last-child{
+      //   margin-left: 2%;
+      // }
+      .search-reset{
+        // margin-right: 4%;
+         flex: 1;
+         &:hover{
+          background:  #02ccfe;
+          color:#fff;
+         }
+         margin-right: 2%;
+      }
+      .search-submit{
+        background: rgba(2, 204, 254, 0.37);
+         flex: 1;
+        //  margin-left: 2%;
+         &:hover{
+          background:  #02ccfe;
+          color:#fff;
+         }
+      }
+    }
+  }
+}
+// 分屏样式-单站点
+::v-deep .left-search-screenStatus{
+  font-size:12px;
+ .table-title{
+   font-size: 14px;
+ }
+ .el-table th.el-table__cell>.cell{
+   font-size: 14px;
+ }
+ .el-table__body td {
+  & .cell {
+    font-weight: 400;
+    font-size: 12px!important;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+}
+// ===============区域查询-表格=================//
+.table-title{
+  height: 40px;
+  line-height: 30px;
+  color:#A3DAE8;
+  font-size:18px;
+  &.region-status{
+     font-size:16px;
+  }
+  &-text{
+    text-align: right;
+    font-size:16px;
+    a{
+     //  text-decoration: underline;
+     cursor: pointer;
+      font-weight: 400;
+      display: inline-block;
+     color: #02CCFE;
+     font-size:16px;
+     border-bottom: 1px solid #02CCFE;
+     position: relative;
+     i{
+       position: absolute;
+       left: -17px;
+       top: 10px;
+     }
+    }
+  }
+  }
+.region-table{
+  border:5px solid #254C61;
+ //  height: 80%;
+  &-header{
+    color:#fff;
+    height: 36px;
+    line-height: 36px;
+    background: #3E6D87;
+    text-align: center;
+    ::v-deep .header-right{
+      text-align: left;
+      padding-left: 10px;
+      border-left:1px solid #6D9EB9;
+      .el-checkbox{
+        color:#fff;
+      }
+       .el-checkbox__inner{
+          width: 16px;
+           height: 16px;
+           background-color: #2E5367;
+           border: 1px solid #77ACC8;
+           opacity: 1;
+        }
+      &-form{
+        float: right;
+        margin-right: 30px;
+      }
+    }
+  }
+  &-content{
+    height:100%; 
+    &-radio{
+      padding-left: 10px;
+      height: calc(100vh - 620px);
+      overflow-x: hidden;
+      overflow-y: auto;
+      .el-radio{
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+      }
+      ::v-deep .el-radio__input + .el-radio__label{
+        font-size: 16px;
+      }
+      ::v-deep .station-error .el-radio__input + .el-radio__label{
+          color: $red;
+        }
+        ::v-deep .station-error .el-radio__input.is-checked + .el-radio__label{
+          color: $red;
+        }
+    }
+    &-file{
+      padding-left: 0;
+      min-height:100px;
+      height: calc(100vh - 620px);
+      overflow-y: auto;
+      border-left:1px solid #6D9EB9;
+      overflow-x: hidden;
+      position: relative;
+      .table-loading{
+        width: 100%;
+      }
+      &-box{
+        width: 100%;
+         div{
+            padding-left: 20px;
+         height: 40px;
+         line-height: 40px;
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         color: #A3DAE8;
+         font-size: 16px;
+         cursor: pointer;
+        &.acitive{
+          background: #1184A4;
+          color: #fff;
+        }
+      }
+      }
+      &-empty{
+        text-align: center;
+        line-height: 100px;
+        color:#ccc;
+        font-size: 14px;
+      }
+    }
+  }
+}
+.common-table {
+  height: 100%;
+
+  ::v-deep .el-table {
+    .el-table__empty-text{
+      background: $gray-blue;
+      color:#72a0ba;
+    }
+    &.el-table--border, 
+    &.el-table--group{
+      border:0;
+    }
+    &::before {
+      height: 0 !important;
+    }
+    &::after {
+      // width: 0 !important;
+      background: $gray-blue;
+    }
+    .el-table__header th,
+    .el-table__header tr {
+      /*表头高度*/
+      // padding: 9px 0px;
+      height: 36px;
+      box-sizing: border-box;
+      background-color: #3E6D87;
+      font-size: 16px;
+      font-family: 'Microsoft YaHei';
+      font-weight: 400;
+      line-height: 21px;
+      color: #fff;
+      border: none;
+      text-align: center;
+    }
+
+    .el-table__header th:nth-child(1) {
+      padding-left: 20px;
+      .cell {
+        padding: 0;
+        text-align: left;
+      }
+    }
+   
+    .el-table__body tr:hover>td {
+      // background-color: #254C61 !important;
+      background-color: rgba(32, 120, 149, 1);
+      color: #fff;
+      cursor: pointer;
+    }
+    .el-table__body tr.el-table__row.current-row>td{
+      background-color: rgba(32, 120, 149, 1);
+      color: #fff;
+      cursor: pointer;
+   }
+    
+    /* 设置表主体的高度 */
+    .el-table__body tr,
+    .el-table__body td {
+      height: 40px;
+      .cell {
+       height: 40px;
+        line-height: 40px;
+        text-align: center;
+      }
+    }
+
+    .el-table__body td {
+      // padding: 4px 0;
+      // margin: 12px 0;
+      font-size: 16px;
+      font-family: ' Microsoft YaHei';
+      font-weight: 400;
+      color: #A3DAE8;
+      background-color: #254C61;
+      border: none;
+    }
+    .el-table__body td {
+      
+      padding: {
+        top: 0 !important;
+        bottom: 0 !important;
+      }
+      & .cell {
+        font-weight: 400;
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+      }
+
+    }
+    .el-table__body td:nth-child(1) {
+      padding-left: 20px;
+      .cell {
+        padding: 0;
+        text-align: left;
+      }
+    }
+}
+
+}
+
+//区域分屏样式-区域
+::v-deep .left-search-region{
+  font-size:12px;
+  .table-title{
+     font-size:14px;
+     &-text{
+       font-size: 12px;
+     }
+     a{
+       font-size: 12px;
+       height: 25px;
+     }
+  }
+  .table-title-radio{
+    padding-right: 0;
+     .el-radio__inner{
+       margin-left:3px;
+       font-size: 12px;
+    }
+    .el-radio__input.is-checked+.el-radio__label{
+      font-size: 12px;
+    } 
+  }
+  .region-table{
+    &-header{
+      font-size: 14px;
+      .header-right{
+        padding-left: 5px;
+        &-form{
+          margin-right: 3px;
+          font-size: 12px;
+          .el-checkbox__label{
+            font-size: 12px;
+            padding-left: 3px;
+          }
+        }
+      }
+    }
+    &-content{
+      &-radio{
+        padding-left: 2px;
+        .el-radio{
+          padding-left: 3px;
+        }
+        .el-radio__inner{
+          width: 12px;
+          height: 12px;
+          &::after{
+            width: 8px;
+            height: 8px;
+          }
+        }
+        .el-radio__label{
+          font-size: 12px;
+          padding-left:4px;
+        }
+      }
+      &-file{
+        padding-left: 0;
+        min-height:100px;
+        height: calc(100vh - 620px);
+        overflow-y: auto;
+        border-left:1px solid #6D9EB9;
+        overflow-x: hidden;
+        position: relative;
+        .table-loading{
+          width: 100%;
+        }
+        &-box{
+          width: 100%;
+           div{
+              padding-left: 20px;
+           height: 40px;
+           line-height: 40px;
+           overflow: hidden;
+           white-space: nowrap;
+           text-overflow: ellipsis;
+           color: #A3DAE8;
+           font-size: 14px;
+           cursor: pointer;
+          &.acitive{
+            background: #1184A4;
+            color: #fff;
+          }
+        }
+        }
+        &-empty{
+          text-align: center;
+          line-height: 100px;
+          color:#ccc;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

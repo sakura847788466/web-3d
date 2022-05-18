@@ -1,0 +1,48 @@
+@import '../../styles/mixin.scss';
+
+.top-part {
+  height: 127px;
+  width: 100%;
+
+  background: url('../../assets/images/head-bg.png') no-repeat center/100% 100%;
+  position: relative;
+
+  .top-title {
+    height: 36px;
+    font-size: 28px;
+    font-family: YouSheBiaoTiHei;
+    line-height: 37px;
+    color: #ffffff;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .monitor-part,
+  .forecast-part {
+    width: 214px;
+    height: 45px;
+    position: absolute;
+    left: 21.49%;
+    top: 30px;
+    font-size: 20px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #ffffff;
+    background-image: url('../../assets/images/defalut-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    line-height: 45px;
+    cursor: pointer;
+  }
+
+  .forecast-part {
+    left: 67.41%;
+  }
+
+  .isActive {
+    background-image: url('../../assets/images/isActive-bg.png');
+  }
+}

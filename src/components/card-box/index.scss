@@ -1,0 +1,51 @@
+@import '../../styles/mixin.scss';
+.card-box{
+  width: 100%;
+  &-title{
+    width: 100%;
+    height: 23px;
+    margin-bottom: 10px;
+    @include flex(center,'');
+    span{
+      font-size: 18px;
+      font-family: YouSheBiaoTiHei;
+      color: #7BF6FF;
+      margin-left: 12px;
+    }
+  }
+  &-list{
+    @include clearfix;
+    width: calc(100% + 16px);
+    &-item{
+      width: 126px;
+      height: 56px;
+      background: #0F6F82;
+      border: 1px solid rgba(82, 228, 252, 0.32156862745098036);
+      float: left;
+      margin: 0 6px 10px 0;
+      padding: 11px 0 9px 8px;
+      box-sizing: border-box;
+      @include flex(center,'');
+      .item-left{
+        @include flexCenter(center);
+        margin-right: 8px;
+      }
+      .item-right{
+        @include flex(center,left);
+        flex-direction: column;
+        span{
+          width: 100%;
+          line-height: 20px;
+          display: inline-block;
+          font-size: 12px;
+          font-family: Microsoft YaHei;
+          font-weight: 400;
+          color: #FFFFFF;
+        }
+        span:nth-child(1){
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}

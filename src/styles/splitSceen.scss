@@ -1,0 +1,189 @@
+/**
+ * @Author: zhuxuxi
+ * @Date:   2021-11-22 11:07:51
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2021-11-30 11:33:19
+ */
+.exit-tool{
+  position: relative;
+  width: 350px;
+  top: 52px;
+  left: 50%;
+  margin-left: -175px;
+  height: 32px;
+  // box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.3);
+  // opacity: 0.7;
+  z-index: 111;
+  .el-button-group{
+      width: 350px;
+      height: 32px;
+      line-height: 32px;
+      padding: 8px 0;
+  }
+  .el-button{
+    padding: 0;
+    line-height: 16px;
+    background: transparent;
+    border: 0;
+    border-right:1px solid #fff;
+    height: 16px;
+    border-radius: 0;
+    width: 25%;
+
+  }
+
+  .el-button:visited{
+    color: #02CCFE;
+  }
+  .el-button:hover{
+    color: #02CCFE;
+  }
+  .el-button:last-child{
+    border-right:0;
+  }
+}
+.tool-active{
+  color: #02CCFE;
+}
+.exit-tool{
+  width: 237px;
+  height: 52px;
+  opacity: 1;
+  position: absolute;
+  text-align: center;
+  z-index: 333;
+  top: 0px;
+  left: 50%;
+  margin-left: -110.5px;
+  background: url('/assets/images/map/bg-exit-tool.png') no-repeat;
+  .el-button-group{
+      width: 237px;
+      height: 52px;
+      line-height: 32px;
+      padding: 15px 10px;
+  }
+  .el-button{
+    padding: 0;
+    line-height: 16px;
+    background: transparent;
+    border: 0;
+    border-right:1px solid #fff;
+    height: 16px;
+    border-radius: 0;
+    width: 60%;
+    font-size: 14px;
+    text-align: left;
+    padding-left: 15px;
+  }
+  
+  &-left.el-button{
+    text-align: right;
+    padding-right: 20px;
+    width: 40%;
+  }
+}
+::v-deep .tool, ::v-deep .exit-tool{
+  .el-button [class*=el-icon-]+span{
+    position: relative;
+    top: -5px;
+    display: inline-block;
+  }
+.el-icon-bz{
+  background: url('/assets/images/map/icon-bz.png') no-repeat;
+  font-size: 16px;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+}
+.el-icon-cj{
+  background: url('/assets/images/map/icon-cj.png') no-repeat;
+  font-size: 16px;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+}
+.el-icon-cm{
+  background: url('/assets/images/map/icon-cm.png') no-repeat;
+  font-size: 16px;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+}
+.el-icon-fp{
+  background: url('/assets/images/map/icon-fp.png') no-repeat;
+  font-size: 16px;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+}
+.el-icon-tc{
+  background: url('/assets/images/map/icon-tc.png') no-repeat;
+  font-size: 16px;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+}
+.tool-active{
+  .el-icon-bz{
+    background: url('/assets/images/map/icon-bz-active.png') no-repeat;
+  }
+  .el-icon-cj{
+    background: url('/assets/images/map/icon-cj-active.png') no-repeat;
+  }
+  .el-icon-cm{
+    background: url('/assets/images/map/icon-cm-active.png') no-repeat;
+  }
+  // .el-icon-fp{
+  //   background: url('/assets/images/map/icon-fp-active.png') no-repeat;
+  // }
+  // .el-icon-tc{
+  //   background: url('/assets/images/map/icon-tc-active.png') no-repeat;
+  // }
+}
+}
+// .el-icon-time{
+//   background: url('/assets/images/map/icon-tc.png') no-repeat;
+//   font-size: 16px;
+//   background-size: cover;
+//   width: 20px;
+//   height: 20px;
+//   margin-top: -2px;
+// }
+.table-loading{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position:absolute;
+  z-index: 111;
+  top:0px;
+  background-color:rgba(0,0,0,0.8);
+  color: #ccc;
+  font-size: 12px;
+
+  i{
+    color: #fff;
+    margin-top: 60px;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+}
+.common-table{
+   position: relative;
+   height: 100%;
+}
+//修改icon
+  //报告
+  .el-icon-bg{
+    background: url('/assets/images/map/icon-bg.png') no-repeat;
+    font-size: 16px;
+    background-size: cover;
+    width: 13px;
+    height: 15px;
+    margin-top: -2px;
+  }
+
